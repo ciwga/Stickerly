@@ -21,7 +21,7 @@ class Stickerly():
             InvalidPath = "stickerly/Invalid Name"
             os.makedirs(InvalidPath)
             os.chdir(InvalidPath)
-        else:
+        except FileExistsError:
             pass
 
         with open("log.txt", "w+", encoding="utf-8") as log:
